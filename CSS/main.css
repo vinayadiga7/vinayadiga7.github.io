@@ -1,0 +1,157 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Roboto", sans-serif; }
+
+.root-page {
+  background-color: #e68abdd5; }
+
+.grid-main {
+  display: grid;
+  grid-template-rows: [row-start header-start] 10rem [header-end head-start] 50rem [head-end main-start] 40rem [main-end foot-start] 10rem [foot-end row-end];
+  grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 20rem [grid-end];
+  gap: 2rem; }
+  .grid-main__item {
+    text-align: center;
+    position: relative; }
+    .grid-main__item--header {
+      grid-row: header-start / header-end;
+      grid-column: col-start 1 / grid-end; }
+    .grid-main__item--head {
+      grid-row: header-start / head-end;
+      grid-column: col-start 1 / grid-end; }
+    .grid-main__item--main-content {
+      grid-row: main-start / main-end;
+      grid-column: col-start 1 / col-end 3; }
+    .grid-main__item--side-bar {
+      grid-row: main-start / main-end; }
+    .grid-main__item--footer {
+      grid-column: col-start 1 / col-end 3; }
+
+.head-container {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, #f03fa0b0 40%, #e68abdd5 60%), url(../Images/Split_Sky_background.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 90% 100%, 0 100%); }
+  .head-container__heading {
+    text-transform: uppercase;
+    color: #585455;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 500;
+    line-height: 1.5;
+    transform: translate(-50%, -60%); }
+
+.header {
+  font-size: 1.8rem;
+  color: #f2f2f2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #f70f8f;
+  position: fixed;
+  width: 100%;
+  z-index: 100; }
+  .header__item {
+    padding: 2rem 1rem;
+    position: relative; }
+    .header__item--search-text {
+      flex: 1; }
+    .header__item:hover:not(:nth-child(1)) {
+      background-color: #e68abdd5;
+      border-bottom: 0.5rem solid #e9910eee; }
+
+.search-box {
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  background-color: #e498c2;
+  color: #0f0f0f;
+  font-weight: 400;
+  width: 25%;
+  transition: width 0.2s ease-out; }
+  .search-box:focus {
+    width: 40%; }
+
+.search.icon.search-icon {
+  position: absolute;
+  top: 2.8rem;
+  right: 39%;
+  cursor: pointer;
+  transition: right 0.2s ease-out; }
+
+.search-box:focus + .search.icon.search-icon {
+  right: 32%; }
+
+i.custom-icon {
+  color: #c5c9ce;
+  font-size: 3rem; }
+
+.menu {
+  opacity: 0; }
+
+#menu:checked ~ .side-navigation {
+  right: 0; }
+
+.notification {
+  display: inline-block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 2rem;
+  width: 2rem;
+  background-color: #e9240a;
+  border-radius: 100px;
+  font-size: 1rem; }
+
+.side-navigation {
+  background-color: #e68abd;
+  width: 30rem;
+  height: 95vh;
+  position: absolute;
+  top: 7.5rem;
+  right: -30rem;
+  z-index: 15;
+  transition: all 0.3s cubic-bezier(1, 0.09, 0.18, 0.89); }
+
+.side-drawer {
+  height: 100%;
+  display: flex;
+  list-style: none;
+  flex-direction: column; }
+  .side-drawer__item {
+    display: block;
+    height: 10%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #344fca; }
+    .side-drawer__item::after {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: -30rem;
+      background-color: #f072b786;
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+      transition: all 0.3s ease-in-out;
+      border-right: 1rem solid #e9910eee; }
+    .side-drawer__item:hover::after {
+      transform: translateX(-30rem); }
