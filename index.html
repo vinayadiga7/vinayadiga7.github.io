@@ -5,7 +5,7 @@
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <link href="./CSS/main.css" rel="stylesheet"/>
         
     </head>
@@ -18,19 +18,52 @@
                             <input type="text" placeholder="search text" class="search-box"/>
                             <i class="search icon search-icon"></i>
                         </div>
-                        <div class="header__item"><i class="bell icon custom-icon"></i><span class="notification">10</span></div>
-                        <div class="header__item"><a href="https://github.com/vinayadiga7"><i class="github icon custom-icon"></i></a></div>
-                        <div class="header__item"><img class="ui avatar image custom-icon" src="./Images/VinayProfilePic.jpg" alt="profile pic" /></div>
+                        <div class="header__item">
+                            <span class="font-icon--medium">
+                                <i class="bell icon nav-icon"></i><span class="notification">10</span>
+                            </span>
+                        </div>
+                        <div class="header__item">
+                            <span class="font-icon--medium">
+                                <a href="https://github.com/vinayadiga7"><i class="github icon nav-icon"></i></a>
+                            </span>
+                            
+                        </div>
+                        <div class="header__item">
+                            <span class="font-icon--medium">
+                                <img class="ui avatar image profile-img" src="./Images/VinayProfilePic.jpg" alt="profile pic" />
+                            </span>
+                            
+                            <!-- <div class="custom-icon-label">Vinay Adiga</div> -->
+                        </div>
                         <div class="header__item header__item--menu">
                             <input id="menu" type="checkbox" class="menu" />
-                            <label for="menu"><i class="th icon custom-icon"></i></label>
+                            <label for="menu" class="custom-menu-icon">
+                                <span class="font-icon--medium">
+                                    <i class="th icon menu-icon"></i>
+                                </span>
+                            </label>
                             <div class="side-navigation">
                                 <ul class="side-drawer">
-                                    <li class="side-drawer__item">Home</li>
-                                    <li class="side-drawer__item">My Profile</li>
-                                    <li class="side-drawer__item">Option 3</li>
-                                    <li class="side-drawer__item">Option 4</li>
-                                </ul>
+                                    <li class="side-drawer__item"><span class="sidebar-icon font-icon-small"><i class="fas fa-home"></i></span>Home</li>
+                                    <li class="side-drawer__item"><span class="sidebar-icon font-icon-small"><i class="fas fa-user"></i></span>My Profile</li>
+                                    <li class="side-drawer__item">
+                                        <span class="sidebar-icon font-icon-small">
+                                            <i class="fab fa-react"></i>
+                                        </span>
+                                        <a class="nav-link" href="https://reactjs.org/docs/getting-started.html">React</a>
+                                    </li>
+                                    <li class="side-drawer__item"><span class="sidebar-icon font-icon-small"><i class="fas fa-arrow-circle-right"></i></span>
+                                        <a class="nav-link" href="https://www.salesforce.com/in/products/">Salesforce</a></li>
+                                    <li class="side-drawer__item" style="flex:1;"> 
+                                        <div class="side-drawer__item-text">This site is availabe on Mobile and Tabs</div>
+                                        <div class="side-drawer__bottom">
+                                            <div class="font-icon--large side-drawer__bottom-item"><i class="fas fa-mobile"> </i></div>
+                                            <div class="font-icon--large side-drawer__bottom-item"><i class="fas fa-tablet"></i></div>
+                                        </div>
+                                       
+                                    </li>
+                               </ul>
                             </div>
                         </div>
                     </nav>
@@ -42,11 +75,81 @@
                     </div>    
                 </div>
             </div>
-                
-             
-            <div class="grid-main__item grid-main__item--side-bar">Side bar</div>
-            <div class="grid-main__item grid-main__item--main-content">Main Content</div>
-            <div class="grid-main__item grid-main__item--footer">Footer</div>
+            <div class="grid-main__item grid-main__item--main-content">
+                <div class="grid-profile">
+                    <div class="grid-profile__item">
+                        <div class="card">
+                            <div class="card__top--my-education">
+                                <div class="card__heading">Education</div>
+                            </div>
+                            <div class="card__bottom">
+                                <ul class="card__list">
+                                    <li>
+                                        <i class="fas fa-chevron-circle-right"></i>
+                                        Completed <b>Computer Science Engineering</b> at <b>PESIT</b>, Bangalore</li>
+                                    <li>
+                                        <i class="fas fa-chevron-circle-right"></i>
+                                        Completed <b>XI</b> from <b>St.Josephs European College</b></li>
+                                    <li>
+                                        <i class="fas fa-chevron-circle-right"></i>
+                                        Completed <b>X</b> from <b>Amara Jyoti English School</b></li>
+                                </ul>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="grid-profile__item">
+                        <div class="card">
+                            <div class="card__top--my-experience">
+                                <div class="card__heading">Experience</div>
+                            </div>
+                            <div class="card__bottom">
+                                <ul class="card__list">
+                                    <li><b>Accenture Solutions</b> <div> <i class="fas fa-chevron-circle-right"></i> <i>Software Developer Analyst</i> => (2018 Dec - Present)</div></li>
+                                    <li><b>Odessa Technologies</b> <div> <i class="fas fa-chevron-circle-right"></i> <i>Junior Application Developer</i> => (2018 Jun - 2018 Nov)</div></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="grid-profile__item">
+                        <div class="card">
+                            <div class="card__top--my-own-projects">
+                                <div class="card__heading">Own Projects</div>
+                            </div>
+                            <div class="card__bottom">
+                                <ul class="card__list">
+                                    <li><i class="fas fa-chevron-circle-right"></i> Video Streaming app</li>
+                                    <li><i class="fas fa-chevron-circle-right"></i> SalesApp</li>
+                                    <li><i class="fas fa-chevron-circle-right"></i> To-do task manager</li>
+                                </ul>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="grid-main__item grid-main__item--footer">
+                <div class="footer">
+                    <span class="footer__icons font-icon--large">
+                        <a class="custom-link" href="https://www.linkedin.com/in/vinay-adiga-030a41161/" ><i class="fab fa-linkedin"></i></a>
+                    </span> 
+                    <span class="footer__icons font-icon--large">
+                        <i class="fab fa-youtube-square"></i>
+                    </span>
+                    <span class="footer__icons font-icon--large">
+                        <i class="fab fa-instagram-square"></i>
+                    </span> 
+                    <span class="footer__icons font-icon--large">
+                        <i class="fab fa-facebook-square"></i>
+                    </span>
+                    <span class="footer__icons font-icon--large">
+                        <i class="fab fa-twitter-square"></i>
+                    </span>
+                    <div class="footer__copy-right">&#169 copyright reserved</div>
+                </div>
+               
+            </div>
         </div>
       
        
